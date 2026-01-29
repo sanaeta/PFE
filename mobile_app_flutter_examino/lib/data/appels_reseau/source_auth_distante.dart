@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
-import '../../general/network/dioClient.dart';
-import '../models/userModel.dart';
+import '../../configuration/connexion_api/client_reseau.dart';
+import '../models/modele_utilisateur.dart';
 
 class AuthRemoteDataSource {
   final Dio _dio = DioClient().dio;
