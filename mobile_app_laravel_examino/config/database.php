@@ -46,11 +46,11 @@ return [
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DB_URL'),
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'laravel'),
-            'username' => env('DB_USERNAME', 'root'),
-            'password' => env('DB_PASSWORD', ''),
+            'host' => '127.0.0.1',
+            'port' => '3306',
+            'database' => 'application_mobile', // <--- NOM DE VOTRE BASE DE DONNÉES
+            'username' => 'root',               // <--- UTILISATEUR PAR DÉFAUT XAMPP
+            'password' => '',                   // <--- MOT DE PASSE VIDE PAR DÉFAUT XAMPP
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => env('DB_CHARSET', 'utf8mb4'),
             'collation' => env('DB_COLLATION', 'utf8mb4_unicode_ci'),

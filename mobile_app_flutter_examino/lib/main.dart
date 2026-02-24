@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
-import 'presentation/ecrans/page_accueil.dart'; // Import de ta nouvelle page
+import 'package:mobile_app_flutter_examino/presentation/ecrans/login_screen.dart';
+import 'package:mobile_app_flutter_examino/presentation/ecrans/register_screen.dart';
+import 'package:mobile_app_flutter_examino/presentation/ecrans/forgot_password_screen.dart';
+import 'package:mobile_app_flutter_examino/presentation/ecrans/success_screen.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() { runApp(const MyApp()); }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
+  @override Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Examino',
-      debugShowCheckedModeBanner: false, // Enlève la petite bannière "Debug"
-      theme: ThemeData(
-        // On laisse le thème par défaut pour l'instant
-        useMaterial3: true,
-      ),
-      // On affiche la page d'accueil directement
-      home: const PageAccueil(),
+      title: 'PFE App', 
+      debugShowCheckedModeBanner: false, 
+      initialRoute: '/login',
+      routes: {
+        '/login': (context) => const LoginScreen(), 
+        '/register': (context) => const RegisterScreen(),
+        '/forgot_password': (context) => const ForgotPasswordScreen(), 
+        '/success': (context) => const SuccessScreen(),
+      },
     );
   }
 }
